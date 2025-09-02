@@ -1,3 +1,11 @@
+name: Check Ops Exposure
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   check-ops-exposure:
     runs-on: ubuntu-latest
@@ -10,6 +18,3 @@ jobs:
 
       - name: Run ops exposure check
         run: ./tools/check_ops_exposure.sh
-        on:
-  workflow_dispatch:
-
