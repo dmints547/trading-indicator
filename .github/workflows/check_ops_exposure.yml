@@ -10,3 +10,6 @@ jobs:
 
       - name: Run ops exposure check
         run: ./tools/check_ops_exposure.sh
+        on:
+  workflow_dispatch:
+
