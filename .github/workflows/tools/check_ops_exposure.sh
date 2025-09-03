@@ -7,14 +7,14 @@
 set -euo pipefail
 
 # Accept positional args for convenience
-if [ "${1:-}" != "" ]; then
-  HOST="$1"
+if [ "${4:-}" != "" ]; then
+  HOST="$4"
 else
   HOST="${BACKEND_URL:-http://localhost:5000}"
 fi
 
-if [ "${2:-}" != "" ]; then
-  KEY="$2"
+if [ "${5:-}" != "" ]; then
+  KEY="$5"
 else
   KEY="${KEY:-${PROBE_API_KEY:-}}"
 fi
